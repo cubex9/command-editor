@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>command-editor</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="tomato" id="left">
+    command-editor | + | using:
+    <div class="menu">
+        platform: IOS XE | model: ASR-920.* | version: <15.0.0
+    </div>
+</div>
+<div class="tomato" id="right">
+    + | types:
+</div>
+<script>
+    var tApi = "http://localhost:8080/api/type/";
+
+    $.getJSON(tApi, function (data) {
+        var items = [];
+        for(var i = 0; i< data.length; i++ ) {
+
+            var t = data[i].ctype;
+            var k = t == "class" ? data[i].cls.replace("eu.teta.tomatoes.conf.commands.","") : data[i].keyword;
+
+            t = t.replace(/multiple-|vlan-range-/,"")
+            items.push('<div class="signature ' + t + '">' + k + '</div>');
+        }
+
+        $("<div/>", {
+            "class": "cmds",
+            html: items.join("")
+        }).appendTo("#right");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    margin: 0pt;
+}
+
+#right {
+    padding: 7pt;
+    float: right;
+    display: table-column;
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+#left {
+    padding: 7pt;
+    float: left;
+    display: table-column;
+}
+
+.signature {
+    padding: 1pt;
+}
+
+.signature:hover {
+    color: black;
+    background-color: goldenrod;
+}
+
+.tomato {
+    font-size: 19pt;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.menu {
+    font-size: 14pt;
+    color: lightslategrey;
+}
+
+.cmds {
+    font-size: 11pt;
+    -font-family: 'Share Tech Mono', monospace;
+}
+
+.command {
+    color: white;
+}
+
+.container, .iface-container {
+    color: orange;
+}
+
+.candidate, .candidate-container {
+    color: lightslategrey;
+}
+
+.class, .mirror {
+    color: deepskyblue;
+}
+
+.the-ring {
+    border-style: solid;
+    border-width: 2pt;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0pt;
+    margin: 0pt;
+    width: 0.75em;
+    height: 0.75em;
+
+    text-align: center;
+}
+
