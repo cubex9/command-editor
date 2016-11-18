@@ -18,6 +18,10 @@ body {
     display: table-column;
 }
 
+#usings {
+    padding: 30pt;
+}
+
 .signature {
     padding: 1pt;
 }
@@ -69,5 +73,15 @@ body {
     height: 0.75em;
 
     text-align: center;
+}
+
+.use {
+    font-size: 11pt;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.use:hover {
+    color: black;
+    background-color: goldenrod;
 }
 

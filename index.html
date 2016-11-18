@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>command-editor</title>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/ctd.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -13,6 +14,9 @@
     <div class="menu">
         platform: IOS XE | model: ASR-920.* | version: <15.0.0
     </div>
+    <div id="usings" class="using-table">
+
+    </div>
 </div>
 <div class="tomato" id="right">
     + | types:
@@ -20,21 +24,33 @@
 <script>
     var tApi = "http://localhost:8080/api/type/";
 
+    // stazeni typu
     $.getJSON(tApi, function (data) {
         var items = [];
-        for(var i = 0; i< data.length; i++ ) {
 
-            var t = data[i].definition.ctype;
-            var k = t == "class" ? data[i].definition.cls.replace("eu.teta.tomatoes.conf.commands.","") : data[i].definition.keyword;
+        for (var i = 0; i < data.length; i++) {
 
-            t = t.replace(/multiple-|vlan-range-|ip-|iface-/g,"")
-            items.push('<div class="signature ' + t + '">' + k + '</div>');
+            items.push(printType(data[i]));
+            types[data[i].id] = data[i];
         }
 
         $("<div/>", {
             "class": "cmds",
             html: items.join("")
         }).appendTo("#right");
+    });
+
+    // stazeni pouziti
+    $.getJSON(tApi + "used", function (data) {
+        var items = [];
+
+        printUsings(items, data, "");
+
+        $("<div/>", {
+            html: items.join("")
+        }).appendTo("#usings");
+
+
     });
 </script>
 </body>
