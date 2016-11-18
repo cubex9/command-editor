@@ -24,10 +24,10 @@
         var items = [];
         for(var i = 0; i< data.length; i++ ) {
 
-            var t = data[i].ctype;
-            var k = t == "class" ? data[i].cls.replace("eu.teta.tomatoes.conf.commands.","") : data[i].keyword;
+            var t = data[i].definition.ctype;
+            var k = t == "class" ? data[i].definition.cls.replace("eu.teta.tomatoes.conf.commands.","") : data[i].definition.keyword;
 
-            t = t.replace(/multiple-|vlan-range-/,"")
+            t = t.replace(/multiple-|vlan-range-|ip-|iface-/g,"")
             items.push('<div class="signature ' + t + '">' + k + '</div>');
         }
 
