@@ -77,11 +77,16 @@ body {
 
 .use {
     font-size: 11pt;
+    padding-left: 5pt;
     font-family: 'Share Tech Mono', monospace;
 }
 
 .use:hover {
     color: black;
     background-color: goldenrod;
+}
+
+.using-table {
+    border-left: lightpink solid 1pt;
 }
 

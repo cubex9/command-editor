@@ -14,9 +14,7 @@
     <div class="menu">
         platform: IOS XE | model: ASR-920.* | version: <15.0.0
     </div>
-    <div id="usings" class="using-table">
-
-    </div>
+    <div id="usings"></div>
 </div>
 <div class="tomato" id="right">
     + | types:
@@ -47,6 +45,7 @@
         printUsings(items, data, "");
 
         $("<div/>", {
+            "class" : "using-table",
             html: items.join("")
         }).appendTo("#usings");
 
