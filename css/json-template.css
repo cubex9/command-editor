@@ -1,0 +1,54 @@
+.command-type {
+    background-color: goldenrod;
+    color: black;
+}
+
+
+.detail-block {
+    font-size: 14pt;
+}
+
+.detail {
+    padding: 1pt;
+    padding-left: 10pt;
+
+    font-size: 11pt;
+    background-color: white;
+    color: black;
+}
+
+.detail-values {
+    color: gray;
+    border-top: dotted gray 1pt;
+}
+
+.detail-expects {
+    color: deepskyblue;
+    border-top: dotted deepskyblue 1pt;
+}
+
+.detail-validators {
+    color: darkorange;
+    border-top: dotted darkorange 1pt;
+}
+
+.detail-dependences {
+    color: red;
+    border-top: dotted darkorange 1pt;
+}
+
+.detail-target {
+    padding-left: 10pt;
+    color: black;
+
+}
+
+.detail-events {
+    color: darkolivegreen;
+    border-top: dotted darkolivegreen 1pt;
+}
+
+.key-ctype {
+    font-weight: bold;
+}
+

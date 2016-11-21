@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>command-editor</title>
+
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="js/ctd.js"></script>
+
+    <script src="js/types.js"></script>
+    <script src="js/fuller.js"></script>
+    <script src="js/usings.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Share+Tech+Mono" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/json-template.css">
+
 </head>
 <body>
 <div class="tomato" id="left">
@@ -30,6 +39,7 @@
 
             items.push(printType(data[i]));
             types[data[i].id] = data[i];
+            typesFuller[data[i].id] = makeTypeFuller(data[i]);
         }
 
         $("<div/>", {
