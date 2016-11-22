@@ -18,8 +18,8 @@
 }
 
 .detail-values {
-    color: gray;
-    border-top: dotted gray 1pt;
+    color: lightslategray;
+    border-top: dotted lightslategray 1pt;
 }
 
 .detail-expects {
@@ -50,5 +50,15 @@
 
 .key-ctype {
     font-weight: bold;
+}
+
+.key-settings {
+    font-size: 8pt;
+    padding: 2pt;
+    margin-bottom: 1pt;
+    margin-right: 1pt;
+    background-color: lightslategray;
+    color: white;
+    display: inline;
 }
 
