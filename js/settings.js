@@ -34,7 +34,8 @@ translateSettings['values'] = [
 ];
 
 translateSettings['target'] = [
-    { text: 'ROOT', num: 0x01, notes: 'hledani cile zacina v rootu'}
+    { text: 'ROOT', num: 0x01, notes: 'hledani cile zacina v rootu'},
+    { text: 'MULTIPLE', num: 0x02, notes: 'vicenasobny vysledek'}
 ];
 
 

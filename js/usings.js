@@ -35,7 +35,7 @@ function removeUsingDetail() {
 function usingsDetail(e) {
     var w = "";
 
-    $.each(usings[e.id], function( key, val ) { w += printDetail(key,val); });
+    $.each(usings[e.id], function( key, val ) { w += printDetail('definition',key,val); });
 
     $("<div/>", {
         "id" : "usings-detail",

@@ -42,7 +42,7 @@ function printDetail(type,key,val) {
         if( key == 'ctype') {
             res += ' | ' + val;
         } else if( key == "settings" ) {
-            res += '<div class="detail">' + type + ": ";
+            res += '<div class="detail">';
             $.each(settings(type,val),function(key,val) { res += '<div class="key-settings">' + val + '</div>';});
             res += '</div>';
         } else {
