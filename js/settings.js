@@ -21,7 +21,9 @@ translateSettings['definition'] = [
         num: 0x02000,
         text: 'REM BEF MOD',
         notes: 'pro prikaz ktery v getCommandsTo potrebuje puvodni nejdrive odmazat ( pomoci no ), a pak teprve nastavit novy, tzn. neni prepisovatelny'
-    }
+    },
+    { text: 'VR_NEGATIVE', num : 0x01000000, notes: 'VlanRangeType prikaz pracuje obracene, tzn. no varianta pridava vlany do rozsahu'},
+    { text: 'NO_DELELETE_ALL', num: 0x02000000, notes: 'CommandListType nepodporuje delete all'}
 ];
 
 translateSettings['values'] = [
@@ -30,12 +32,13 @@ translateSettings['values'] = [
     {text: 'NULLABLE', num: 0x0004, notes: 'neni povinna, muze byt null, optional'},
     {text: 'NOT SPACE', num: 0x0008, notes: 'pred hodnotou neni mezera'},
     {text: 'DIFF COMP', num: 0x0010, notes: 'hodnota se porovnava primo jako value ne v ramci celeho prikazu'},
-    {text: 'OPT SPACE', num: 0x0020, notes: 'mezera neni povinna, pri tisku se ridi podle NOT_SPACE'}
+    {text: 'OPT SPACE', num: 0x0020, notes: 'mezera neni povinna, pri tisku se ridi podle NOT_SPACE'},
+    {text: 'LIST ID', num: 0x0040, note: 'identita listu, plati pro CommandListType prikazy '}
 ];
 
 translateSettings['target'] = [
     { text: 'ROOT', num: 0x01, notes: 'hledani cile zacina v rootu'},
-    { text: 'MULTIPLE', num: 0x02, notes: 'vicenasobny vysledek'}
+    { text: 'MULTI', num: 0x02, notes: 'vicenasobny vysledek'}
 ];
 
 

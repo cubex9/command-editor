@@ -17,6 +17,11 @@
     color: black;
 }
 
+.defail-using {
+    color: lightslategray;
+    border-top: dotted lightslategray 1pt;
+}
+
 .detail-values {
     color: lightslategray;
     border-top: dotted lightslategray 1pt;
@@ -48,8 +53,26 @@
     border-top: dotted darkolivegreen 1pt;
 }
 
+
+.key-id {
+
+    font-size: 8pt;
+    font-weight: bold;
+    display: inline;
+    vertical-align: 39%;
+    font-family: 'Roboto Mono', monospace;
+}
 .key-ctype {
     font-weight: bold;
+}
+
+.key-signature {
+
+}
+
+.key-notes {
+    background-color: lavenderblush;
+    color: lightslategray;
 }
 
 .key-settings {

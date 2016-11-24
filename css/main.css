@@ -1,14 +1,21 @@
 
 body {
     margin: 0pt;
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #right {
     padding: 7pt;
     float: right;
     display: table-column;
-    width: 25%;
-    height: 100vh;
+    width: 21%;
+    height: 99vh;
     background-color: black;
     color: white;
     overflow-y: auto;
@@ -19,6 +26,10 @@ body {
     padding: 7pt;
     float: left;
     display: table-column;
+    width: 74%;
+    height:99vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #usings {
@@ -46,7 +57,6 @@ body {
 
 .cmds {
     font-size: 11pt;
-    -font-family: 'Share Tech Mono', monospace;
 }
 
 .command {
@@ -58,11 +68,11 @@ body {
 }
 
 .candidate, .candidate-container {
-    color: lightslategrey;
+    color: #888888;
 }
 
 .class, .mirror {
-    color: deepskyblue;
+    color: lightslategrey;
 }
 
 .the-ring {
@@ -79,18 +89,20 @@ body {
 }
 
 .use {
-    font-size: 11pt;
+    font-size: 9pt;
     padding-left: 5pt;
-    font-family: 'Share Tech Mono', monospace;
+    padding-bottom: 1pt;
+    font-family: 'Roboto Mono', monospace;
+    border-bottom: solid #f6f6f6 1pt;
 }
 
 .use:hover {
-    color: black;
-    background-color: goldenrod;
+    color: white;
+    background-color: lightslategrey;
 }
 
 .using-table {
-    border-left: lightpink solid 1pt;
+    border-left: lightslategrey solid 1pt;
 }
 
 .detail-window {
@@ -110,12 +122,12 @@ body {
     position: absolute;
 
     top: 0pt;
-    right: 27%;
-    width: 25%;
+    right: 23%;
+    width: 35%;
 
     z-index: 4;
 
-    max-height: 100vh;
+    max-height: 99vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -137,8 +149,12 @@ body {
     position: absolute;
 
     top: 0pt;
-    right: 27%;
+    right: 23%;
     width: 35%;
+
+    max-height: 99vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     z-index: 4;
 }
@@ -152,6 +168,20 @@ body {
     height: auto;
     z-index: 3;
 }
+
+::-webkit-scrollbar { width: 5pt; height: 3pt;}
+
+::-webkit-scrollbar-button {  background-color: transparent; }
+
+::-webkit-scrollbar-track {  background-color: transparent;}
+
+::-webkit-scrollbar-track-piece { background-color: transparent;}
+
+::-webkit-scrollbar-thumb { height: 20pt; background-color: whitesmoke; border-radius: 5pt;}
+
+::-webkit-scrollbar-corner { background-color: transparent;}
+
+::-webkit-resizer { background-color: transparent;}
 
 
 
