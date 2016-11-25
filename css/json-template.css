@@ -17,9 +17,16 @@
     color: black;
 }
 
-.defail-using {
+.detail-using {
+    color: black;
+    ---border-top: dotted lightslategray 1pt;
+}
+
+.detail-subs {
     color: lightslategray;
     border-top: dotted lightslategray 1pt;
+    padding-left: 10pt;
+    margin-top: 2pt;
 }
 
 .detail-values {
@@ -55,8 +62,8 @@
 
 
 .key-id {
-
     font-size: 8pt;
+    letter-spacing: 1px;
     font-weight: bold;
     display: inline;
     vertical-align: 39%;
@@ -71,17 +78,36 @@
 }
 
 .key-notes {
-    background-color: lavenderblush;
+    background-color: #eeffee;
     color: lightslategray;
 }
 
-.key-settings {
+.key-settings, .key-boolean-true, .key-boolean-false {
     font-size: 8pt;
     padding: 2pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
     margin-bottom: 1pt;
     margin-right: 1pt;
     background-color: lightslategray;
     color: white;
     display: inline;
+    text-transform: uppercase;
+    border-radius: 8pt;
+}
+
+.key-boolean-true, .key-boolean-false {
+    border-radius: 50%;
+    border: solid lightslategray 1pt;
+    padding: 1pt;
+    padding-left: 3pt;
+    padding-right: 3pt;
+    vertical-align: middle;
+
+}
+
+.key-boolean-false {
+    background-color: white;
+    color: lightslategray;
 }
 

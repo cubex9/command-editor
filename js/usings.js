@@ -1,52 +1,12 @@
 /**
  * Created by kubasek on 11/21/2016.
  */
-var u = {
-    "id": 25001,
-    "definition": 19767,
-    "position": 5,
-    "subs": [
-        {
-            "id": 25003,
-            "definition": 19769,
-            "parent": 25001,
-            "position": 1,
-            "subs": [{
-                "id": 25004,
-                "definition": 19770,
-                "parent": 25003,
-                "position": 0,
-                "subs": [],
-                "automatic": false,
-                "rewrite": false,
-                "hidden": false
-            }],
-            "automatic": false,
-            "rewrite": false,
-            "hidden": false
-        },
-        {
-            "id": 25002,
-            "definition": 19768,
-            "parent": 25001,
-            "position": 0,
-            "subs": [],
-            "automatic": false,
-            "rewrite": false,
-            "hidden": false
-        }
-    ],
-    "automatic": false,
-    "rewrite": false,
-    "hidden": false
-};
-
-
 var usings = [];
 
-function Using(p,o) {
+function Using(t,k,o) {
 
-    this._parent;
+    this._t = 'Using';
+    this._k = k;
 
     this.id;
     this.definition;
@@ -54,21 +14,38 @@ function Using(p,o) {
     this.position;
     this.subs;
 
+    this.platform = "IOS";
+    this.modelPattern = ".*";
+    this.gteVersion = '15.0';
+    this.ltVersion = '';
+
     this.automatic;
     this.rewrite;
     this.hidden;
     this.form;
 
-    this.notes;
+    this.notes = 'exported';
 
 
     this.header = function () {
-        return '<div class="detail-block detail-using">' + detail_no_key('id',this.id) + " | " + this.definition.id
-            + detail_no_key('notes', this.notes);
+        return '<div class="detail-block detail-using">' + this.position
+            + " | " + this.definition.identificator
+                + " | " + pr.booleans(this,[ 'automatic','hidden', 'rewrite' ])
+            + pr.val('notes', this.notes);
     };
 
     this.body = function () {
-        return printComplete(this['definition']);
+        b = ''; //detail_booleans(this,[ 'automatic','hidden', 'rewrite' ]);
+        b += pr.keyVal('platform', this.platform);
+        b += pr.keyVal('modelPattern', this.modelPattern);
+        b += pr.keyVal('gteVersion', this.gteVersion);
+        b += pr.keyVal('ltVersion', this.ltVersion);
+
+        if( this.subs != undefined && this.subs.values.length > 0 ) {
+            b += pr.complete(this.subs);
+        }
+
+        return b; // + printComplete(this['definition']);
     };
 
     this.footer = function () {
@@ -122,9 +99,7 @@ function usingsDetail(e) {
         return;
     }
 
-    var w = "";
-
-    $.each(usings[e.id], function( key, val ) { w += printDetail('definition',key,val); });
+    var w = pr.complete(new Using(null,null,usings[e.id]));
 
     $("<div/>", {
         "id" : "usings-detail",
