@@ -98,7 +98,7 @@
 
 .key-boolean-true, .key-boolean-false {
     border-radius: 50%;
-    border: solid lightslategray 1pt;
+    border: solid lightslategray 2pt;
     padding: 1pt;
     padding-left: 3pt;
     padding-right: 3pt;
