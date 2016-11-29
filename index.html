@@ -12,6 +12,7 @@
     <script src="js/types.js"></script>
     <script src="js/fuller.js"></script>
     <script src="js/usings.js"></script>
+    <script src="js/tests.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
 
@@ -61,6 +62,8 @@
         }).appendTo("#right");
     });
 
+    loadTests( tApi + 'tests');
+
     // stazeni pouziti
     $.getJSON(tApi + "used", function (data) {
         var items = [];
@@ -71,9 +74,9 @@
             "class" : "using-table",
             html: items.join("")
         }).appendTo("#usings");
-
-
     });
+
+
 </script>
 </body>
 </html>

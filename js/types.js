@@ -51,7 +51,10 @@ function TypeData(o) {
     };
 
     this.body = function () {
-        return pr.complete(this['definition']);
+        var b = pr.complete(this['definition']);
+        b += pr.complete(this['tests']);
+
+        return b;
     };
 
     this.footer = function () {
@@ -59,6 +62,7 @@ function TypeData(o) {
     };
 
     typeMapper(this, o);
+    this.tests = new List('tests', linkTests(this.id), function(t,k,o) { return new Test(t,k,o);});
 };
 
 function Definition(o) {

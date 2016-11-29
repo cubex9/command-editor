@@ -36,10 +36,12 @@ function Using(t,k,o) {
 
     this.body = function () {
         b = ''; //detail_booleans(this,[ 'automatic','hidden', 'rewrite' ]);
-        b += pr.keyVal('platform', this.platform);
-        b += pr.keyVal('modelPattern', this.modelPattern);
-        b += pr.keyVal('gteVersion', this.gteVersion);
-        b += pr.keyVal('ltVersion', this.ltVersion);
+        // b += pr.keyVal('platform', this.platform);
+        // b += pr.keyVal('modelPattern', this.modelPattern);
+        // b += pr.keyVal('gteVersion', this.gteVersion);
+        // b += pr.keyVal('ltVersion', this.ltVersion);
+
+        b += pr.ins(this,[ 'platform', '|', 'modelPattern', '|', 'gteVersion', '-', 'ltVersion']);
 
         if( this.subs != undefined && this.subs.values.length > 0 ) {
             b += pr.complete(this.subs);

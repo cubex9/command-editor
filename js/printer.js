@@ -13,6 +13,7 @@ function InPrinter(t) {
     };
 };
 
+
 function Printer() {
 
     this.keyVal = function(key, val) {
@@ -21,6 +22,22 @@ function Printer() {
 
     this.val = function(key, val) {
         return '<div class="detail key-' + key + '">' + val + '</div>';
+    };
+
+    this.ins = function( t, vals ) {
+        var res = '<div class="detail">';
+        for( var v in vals ) {
+            if( t[vals[v]] == undefined ) {
+                res += '<div class="detail-in">' + '&nbsp' + vals[v] + '&nbsp' +  '</div>';
+            } else {
+                res += '<div class="detail-in key-' + vals[v] + '">' + t[vals[v]] + '</div>';
+            }
+        }
+        return res + '</div>';
+    };
+
+    this.in = function( key, val ) {
+        return '<div class="detail-in key-' + key + '">'+  val + '</div>';
     };
 
     this.settings = function(type, val) {
