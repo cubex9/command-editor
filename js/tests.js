@@ -7,7 +7,7 @@ function loadTests(url) {
 function linkTests(id) {
     var res = [];
     for( t in tests ) {
-        if( tests[t].definition == id) {
+        if( tests[t].defId == id) {
             res.push(tests[t]);
         }
     }
@@ -20,7 +20,7 @@ function Test(t,k,o) {
     this._k;
 
     this.id;
-    this.definition;
+    this.difId;
     this.type;
     this.conf;
     this.exp;
