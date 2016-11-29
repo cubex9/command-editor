@@ -1,38 +1,28 @@
-.wiky_preview_area {
-    font-family: "Helvetica Neue", Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
-    font-size: 13px;
-    line-height: 1.5em;
+.wiki {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13pt;
+    line-height: 1.1em;
     color: #666;
     font-weight:350;
-    width:600px;
+    width:600pt;
     display:block;
 }
-.wiky_preview_area h2{
-    font-size:24px;
+.wiki h2{
+    font-size:24pt;
     color:#333;
     font-weight:400;
-
-    text-shadow:0 1px 0 rgba(000, 000, 000, .4);
 }
-.wiky_preview_area h3{
-    font-size:18px;
+.wiki h3{
+    font-size:18pt;
     color:#555;
     font-weight:400;
-
-    text-shadow:0 1px 0 rgba(000, 000, 000, .4);
 }
-.wiky_preview_area img{
+.wiki img{
     background-repeat: repeat;
-    width: 400px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow:0 1px  3px rgba(0, 0, 0, .8);
-    -moz-box-shadow:0 1px  3px rgba(0, 0, 0, .8);
-    box-shadow:0 1px  3px rgba(0, 0, 0, .8);
+    width: 400pt;
 }
-.wiky_preview_area a{
-    padding:5px;
+.wiki a{
+    padding:5pt;
     font-weight:400;
 
     background: #999; /* for non-css3 browsers */
@@ -41,38 +31,26 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #ccc,  #000); /* for firefox 3.6+ */
 
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-
-    -webkit-box-shadow:none;
-    -moz-box-shadow:none;
-    box-shadow:none;
-
-    text-shadow:0 1px 0 rgba(255, 255, 255, 1);
+    -webkit-border-radius: 4pt;
+    -moz-border-radius: 4pt;
+    border-radius: 4pt;
 }
 
-.wiky_preview_area a:hover{
+.wiki a:hover{
     color:#333;
-    padding:5px;
+    padding:5pt;
     font-weight:400;
     text-decoration:none;
 
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-
-    -webkit-box-shadow:0 1px  3px rgba(0, 0, 0, .3);
-    -moz-box-shadow:0 1px  3px rgba(0, 0, 0, .3);
-    box-shadow:0 1px  3px rgba(0, 0, 0, .3);
-
-    text-shadow:0 1px 0 rgba(255, 255, 255, 1);
+    -webkit-border-radius: 4pt;
+    -moz-border-radius: 4pt;
+    border-radius: 4pt;
 }
 
 
-.wiky_preview_area > ol,
-.wiky_preview_area > ul,
-.wiky_preview_area > ul > li,
-.wiky_preview_area > ol > li {
+.wiki > ol,
+.wiki > ul,
+.wiki > ul > li,
+.wiki > ol > li {
     list-style: disc inside none;
 }
