@@ -1,2 +1,3 @@
 # command-editor
-keke
+
+editor definic a pouziti prikazu v boxu
