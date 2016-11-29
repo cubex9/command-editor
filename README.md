@@ -1,3 +1,3 @@
 # command-editor
 
-editor definic a pouziti prikazu v boxu
+HTML5 editor definic a pouziti prikazu v boxu
