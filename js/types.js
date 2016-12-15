@@ -1,6 +1,10 @@
 /**
  * Created by kubasek on 11/14/2016.
  */
+function isEmpty(c) {
+    return c == undefined || c == null;
+};
+
 function byId(id) {
     for (p in types) {
         if (types[p].id == id) {
