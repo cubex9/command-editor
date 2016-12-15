@@ -100,11 +100,11 @@ body {
 
 .use:hover {
     color: white;
-    background-color: lightslategrey;
+    background-color: red;
 }
 
 .using-table {
-    border-left: lightslategrey solid 1pt;
+    border-left: red solid 0.5pt;
 }
 
 .detail-window {
