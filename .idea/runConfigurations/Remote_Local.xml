@@ -1,0 +1,44 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Remote-Local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 8.0.27" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="LOCAL" value="false" />
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ce" />
+    <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+    <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+    <deployment>
+      <artifact name="command-editor">
+        <settings>
+          <option name="CONTEXT_PATH" value="/ce" />
+        </settings>
+      </artifact>
+    </deployment>
+    <server-settings>
+      <data>
+        <option name="stagingRemotePath" value="" />
+        <option name="transportStagingTarget">
+          <TransportTarget>
+            <option name="id" value="5a7099f5-d25a-4c9e-a7b6-357460d17ced" />
+            <id>5a7099f5-d25a-4c9e-a7b6-357460d17ced</id>
+          </TransportTarget>
+        </option>
+        <transport-target>
+          <TransportTarget>
+            <option name="id" value="5a7099f5-d25a-4c9e-a7b6-357460d17ced" />
+            <id>5a7099f5-d25a-4c9e-a7b6-357460d17ced</id>
+          </TransportTarget>
+        </transport-target>
+        <staging-path />
+      </data>
+    </server-settings>
+    <predefined_log_file id="Tomcat" enabled="true" />
+    <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="56405" />
+      <option name="LOCAL" value="false" />
+    </RunnerSettings>
+    <method>
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="command-editor" />
+      </option>
+    </method>
+  </configuration>
+</component>

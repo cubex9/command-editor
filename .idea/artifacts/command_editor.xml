@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="command-editor">
+    <output-path>$PROJECT_DIR$/out/artifacts/command_editor</output-path>
+    <root id="archive" name="command-editor.war">
+      <element id="file-copy" path="$PROJECT_DIR$/index.html" />
+      <element id="directory" name="js">
+        <element id="dir-copy" path="$PROJECT_DIR$/js" />
+      </element>
+      <element id="directory" name="css">
+        <element id="dir-copy" path="$PROJECT_DIR$/css" />
+      </element>
+      <element id="directory" name="pix">
+        <element id="dir-copy" path="$PROJECT_DIR$/pix" />
+      </element>
+    </root>
+  </artifact>
+</component>
